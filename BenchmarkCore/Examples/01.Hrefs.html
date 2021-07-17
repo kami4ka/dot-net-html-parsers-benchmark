@@ -1,0 +1,1447 @@
+﻿
+<!doctype html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>ScrapingAnt - Web Scraping API | Headless Chrome | Proxy</title>
+
+		<!-- All in One SEO 4.1.1.1 -->
+		<meta name="description" content="ScrapingAnt is a Web Scraping API for extracting data from websites with a free plan. It handles the rotating proxies, CAPTCHA, Cloudflare and headless browser rendering."/>
+		<link rel="canonical" href="https://scrapingant.com/"/>
+		<meta property="og:site_name" content="ScrapingAnt - Web Scraping API | ScrapingAnt is a Web Scraping API that handles proxies and Javascript rendering for you, so just do the lovely things - data extraction and analysis."/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:title" content="ScrapingAnt - Web Scraping API | Headless Chrome | Proxy"/>
+		<meta property="og:description" content="ScrapingAnt is a Web Scraping API for extracting data from websites with a free plan. It handles the rotating proxies, CAPTCHA, Cloudflare and headless browser rendering."/>
+		<meta property="og:url" content="https://scrapingant.com/"/>
+		<meta property="article:published_time" content="2020-04-03T19:44:38Z"/>
+		<meta property="article:modified_time" content="2021-07-02T17:33:49Z"/>
+		<meta property="article:publisher" content="https://www.facebook.com/scrapingant"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:site" content="@ScrapingAnt"/>
+		<meta name="twitter:domain" content="scrapingant.com"/>
+		<meta name="twitter:title" content="ScrapingAnt - Web Scraping API | Headless Chrome | Proxy"/>
+		<meta name="twitter:description" content="ScrapingAnt is a Web Scraping API for extracting data from websites with a free plan. It handles the rotating proxies, CAPTCHA, Cloudflare and headless browser rendering."/>
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/scrapingant.com\/#website","url":"https:\/\/scrapingant.com\/","name":"ScrapingAnt - Web Scraping API","description":"ScrapingAnt is a Web Scraping API that handles proxies and Javascript rendering for you, so just do the lovely things - data extraction and analysis.","publisher":{"@id":"https:\/\/scrapingant.com\/#organization"},"potentialAction":{"@type":"SearchAction","target":"https:\/\/scrapingant.com\/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https:\/\/scrapingant.com\/#organization","name":"ScrapingAnt","url":"https:\/\/scrapingant.com\/","logo":{"@type":"ImageObject","@id":"https:\/\/scrapingant.com\/#organizationLogo","url":"https:\/\/scrapingant.com\/wp-content\/uploads\/2020\/04\/\u0440\u043f\u043b\u043e.png","width":"500","height":"500"},"image":{"@id":"https:\/\/scrapingant.com\/#organizationLogo"},"sameAs":["https:\/\/www.facebook.com\/scrapingant","https:\/\/twitter.com\/ScrapingAnt","https:\/\/www.linkedin.com\/company\/scrapingant\/"]},{"@type":"BreadcrumbList","@id":"https:\/\/scrapingant.com\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/scrapingant.com\/#listItem","position":"1","item":{"@id":"https:\/\/scrapingant.com\/#item","name":"Home","description":"ScrapingAnt is a Web Scraping API for extracting data from websites with a free plan. It handles the rotating proxies, CAPTCHA, Cloudflare and headless browser rendering.","url":"https:\/\/scrapingant.com\/"}}]},{"@type":"WebPage","@id":"https:\/\/scrapingant.com\/#webpage","url":"https:\/\/scrapingant.com\/","name":"ScrapingAnt - Web Scraping API | Headless Chrome | Proxy","description":"ScrapingAnt is a Web Scraping API for extracting data from websites with a free plan. It handles the rotating proxies, CAPTCHA, Cloudflare and headless browser rendering.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/scrapingant.com\/#website"},"breadcrumb":{"@id":"https:\/\/scrapingant.com\/#breadcrumblist"},"image":{"@type":"ImageObject","@id":"https:\/\/scrapingant.com\/#mainImage","url":"https:\/\/scrapingant.com\/wp-content\/uploads\/2020\/04\/1-3.jpg","width":"1516","height":"1001"},"primaryImageOfPage":{"@id":"https:\/\/scrapingant.com\/#mainImage"},"datePublished":"2020-04-03T19:44:38+00:00","dateModified":"2021-07-02T17:33:49+00:00"}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//s.w.org'/>
+<link rel="alternate" type="application/rss+xml" title="ScrapingAnt - Web Scraping API &raquo; Feed" href="https://scrapingant.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="ScrapingAnt - Web Scraping API &raquo; Comments Feed" href="https://scrapingant.com/comments/feed/"/>
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v7.17.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=UA-162341230-1" type="text/javascript" data-cfasync="false"></script>
+			<script type="text/javascript" data-cfasync="false">var mi_version='7.17.0';var mi_track_user=true;var mi_no_track_reason='';var disableStr='ga-disable-UA-162341230-1';function __gtagTrackerIsOptedOut(){return document.cookie.indexOf(disableStr+'=true')>-1;}if(__gtagTrackerIsOptedOut()){window[disableStr]=true;}function __gtagTrackerOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';window[disableStr]=true;}if('undefined'===typeof gaOptout){function gaOptout(){__gtagTrackerOptout();}}window.dataLayer=window.dataLayer||[];if(mi_track_user){function __gtagTracker(){dataLayer.push(arguments);}__gtagTracker('js',new Date());__gtagTracker('set',{'developer_id.dZGIzZG':true,});__gtagTracker('config','UA-162341230-1',{forceSSL:true,link_attribution:true,});window.gtag=__gtagTracker;(function(){var noopfn=function(){return null;};var newtracker=function(){return new Tracker();};var Tracker=function(){return null;};var p=Tracker.prototype;p.get=noopfn;p.set=noopfn;p.send=function(){var args=Array.prototype.slice.call(arguments);args.unshift('send');__gaTracker.apply(null,args);};var __gaTracker=function(){var len=arguments.length;if(len===0){return;}var f=arguments[len-1];if(typeof f!=='object'||f===null||typeof f.hitCallback!=='function'){if('send'===arguments[0]){var hitConverted,hitObject=false,action;if('event'===arguments[1]){if('undefined'!==typeof arguments[3]){hitObject={'eventAction':arguments[3],'eventCategory':arguments[2],'eventLabel':arguments[4],'value':arguments[5]?arguments[5]:1,}}}if(typeof arguments[2]==='object'){hitObject=arguments[2];}if(typeof arguments[5]==='object'){Object.assign(hitObject,arguments[5]);}if('undefined'!==typeof(arguments[1].hitType)){hitObject=arguments[1];}if(hitObject){action='timing'===arguments[1].hitType?'timing_complete':hitObject.eventAction;hitConverted=mapArgs(hitObject);__gtagTracker('event',action,hitConverted);}}return;}function mapArgs(args){var gaKey,hit={};var gaMap={'eventCategory':'event_category','eventAction':'event_action','eventLabel':'event_label','eventValue':'event_value','nonInteraction':'non_interaction','timingCategory':'event_category','timingVar':'name','timingValue':'value','timingLabel':'event_label',};for(gaKey in gaMap){if('undefined'!==typeof args[gaKey]){hit[gaMap[gaKey]]=args[gaKey];}}return hit;}try{f.hitCallback();}catch(ex){}};__gaTracker.create=newtracker;__gaTracker.getByName=newtracker;__gaTracker.getAll=function(){return[];};__gaTracker.remove=noopfn;__gaTracker.loaded=true;window['__gaTracker']=__gaTracker;})();}else{console.log("");(function(){function __gtagTracker(){return null;}window['__gtagTracker']=__gtagTracker;window['gtag']=__gtagTracker;})();}</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/scrapingant.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.4"}};!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+		<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://scrapingant.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='hello-elementor-css' href='https://scrapingant.com/wp-content/themes/hello-elementor/style.min.css?ver=2.2.0' type='text/css' media='all'/>
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://scrapingant.com/wp-content/themes/hello-elementor/theme.min.css?ver=2.2.0' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-icons-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.11.0' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-animations-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.2.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-frontend-legacy-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.2.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.4' type='text/css' media='all'/>
+<style id='elementor-frontend-inline-css' type='text/css'>
+@font-face{font-family:eicons;src:url(http://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(http://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(http://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(http://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(http://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(http://scrapingant.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel='stylesheet' id='elementor-post-6-css' href='https://scrapingant.com/wp-content/uploads/elementor/css/post-6.css?ver=1623322760' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-pro-css' href='https://scrapingant.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.2.1' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-global-css' href='https://scrapingant.com/wp-content/uploads/elementor/css/global.css?ver=1623322760' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-post-45-css' href='https://scrapingant.com/wp-content/uploads/elementor/css/post-45.css?ver=1625247240' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-post-302-css' href='https://scrapingant.com/wp-content/uploads/elementor/css/post-302.css?ver=1623322761' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-post-309-css' href='https://scrapingant.com/wp-content/uploads/elementor/css/post-309.css?ver=1623322761' type='text/css' media='all'/>
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.6.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.1' type='text/css' media='all'/>
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.1' type='text/css' media='all'/>
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>//<![CDATA[
+var monsterinsights_frontend={"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/scrapingant.com","hash_tracking":"false","ua":"UA-162341230-1"};
+//]]></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=7.17.0' id='monsterinsights-frontend-script-js'></script>
+<link rel="https://api.w.org/" href="https://scrapingant.com/wp-json/"/><link rel="alternate" type="application/json" href="https://scrapingant.com/wp-json/wp/v2/pages/45"/><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://scrapingant.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://scrapingant.com/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.6.4"/>
+<link rel='shortlink' href='https://scrapingant.com/'/>
+<link rel="alternate" type="application/json+oembed" href="https://scrapingant.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fscrapingant.com%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://scrapingant.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fscrapingant.com%2F&#038;format=xml"/>
+<link rel="icon" href="https://scrapingant.com/wp-content/uploads/2020/04/рпло-150x150.png" sizes="32x32"/>
+<link rel="icon" href="https://scrapingant.com/wp-content/uploads/2020/04/рпло-300x300.png" sizes="192x192"/>
+<link rel="apple-touch-icon" href="https://scrapingant.com/wp-content/uploads/2020/04/рпло-300x300.png"/>
+<meta name="msapplication-TileImage" content="https://scrapingant.com/wp-content/uploads/2020/04/рпло-300x300.png"/>
+		<style type="text/css" id="wp-custom-css">#bitnami-banner{display:none}.site-header{display:none}</style>
+			<script src="https://script.tapfiliate.com/tapfiliate.js" type="text/javascript" async></script>
+	<script type="text/javascript">(function(t,a,p){t.TapfiliateObject=a;t[a]=t[a]||function(){(t[a].q=t[a].q||[]).push(arguments)}})(window,'tap');tap('create','22854-224f32',{integration:"paddle"});tap('detect');function trackConversion(data){var order_amount=(data.checkout.prices.vendor.total-data.checkout.prices.vendor.total_tax).toFixed(2);tap('conversion',data.checkout.id,order_amount);}</script>
+</head>
+<body class="home page-template page-template-elementor_header_footer page page-id-45 elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-45">
+
+		<div data-elementor-type="header" data-elementor-id="302" class="elementor elementor-302 elementor-location-header" data-elementor-settings="[]">
+		<div class="elementor-section-wrap">
+					<header class="elementor-section elementor-top-section elementor-element elementor-element-11c8a00a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="11c8a00a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-606f0e3f" data-id="606f0e3f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2b8294b elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="2b8294b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">ScrapingAnt</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7aa72d3e elementor-hidden-phone elementor-widget elementor-widget-image" data-id="7aa72d3e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+													<a href="https://scrapingant.com/">
+							<img src="https://scrapingant.com/wp-content/uploads/elementor/thumbs/рпло-onkgmrkfymivnq1x256oik7rhfrj89ognxglwu2o00.png" title="" alt=""/>								</a>
+														</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f6a5e03" data-id="f6a5e03" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-208c38e7 elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--indicator-classic elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="208c38e7" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-grow"><ul id="menu-1-208c38e7" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-79"><a href="https://scrapingant.com/#features" aria-current="page" class="elementor-item elementor-item-anchor">Features</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-78"><a href="https://scrapingant.com/#pricing" aria-current="page" class="elementor-item elementor-item-anchor">Pricing</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="https://scrapingant.com/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-596"><a href="https://docs.scrapingant.com" class="elementor-item">Documentation</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-99"><a href="https://scrapingant.com/legal/affiliate/" class="elementor-item">Affiliate</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221"><a href="https://scrapingant.com/free-proxies/" class="elementor-item">Free Proxies</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-132"><a href="https://scrapingant.com/#contact" aria-current="page" class="elementor-item elementor-item-anchor">Contact Us</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true"><ul id="menu-2-208c38e7" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-79"><a href="https://scrapingant.com/#features" aria-current="page" class="elementor-item elementor-item-anchor">Features</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-78"><a href="https://scrapingant.com/#pricing" aria-current="page" class="elementor-item elementor-item-anchor">Pricing</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="https://scrapingant.com/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-596"><a href="https://docs.scrapingant.com" class="elementor-item">Documentation</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-99"><a href="https://scrapingant.com/legal/affiliate/" class="elementor-item">Affiliate</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221"><a href="https://scrapingant.com/free-proxies/" class="elementor-item">Free Proxies</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-132"><a href="https://scrapingant.com/#contact" aria-current="page" class="elementor-item elementor-item-anchor">Contact Us</a></li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3fb8bcb0" data-id="3fb8bcb0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-535c9a50 elementor-align-right elementor-tablet-align-right elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="535c9a50" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://app.scrapingant.com/login" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Try NOW</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</header>
+				</div>
+		</div>
+				<div data-elementor-type="wp-page" data-elementor-id="45" class="elementor elementor-45" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-382cda16 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="382cda16" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7b1bb92" data-id="7b1bb92" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-35dbef88 elementor-widget elementor-widget-heading" data-id="35dbef88" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Web Scraping Without Getting Blocked</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5fad8f4 elementor-widget elementor-widget-heading" data-id="5fad8f4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Tired of changing different proxies and handling headless browsers?</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6c211ed2 elementor-widget elementor-widget-text-editor" data-id="6c211ed2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>Web Scraping and Data Extraction are challenging tasks.<br/>You have to handle Javascript rendering, headless browser updates and maintenance, and proxies diversity and rotation.</p><p><strong>Forget about getting blocked with three simple steps</strong>:</p>					</div>
+						</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6e11f2f9 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6e11f2f9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2ad8ada2" data-id="2ad8ada2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7d3b76ca elementor-widget elementor-widget-heading" data-id="7d3b76ca" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">CHOOSE YOUR PLAN</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2be31e9a elementor-widget elementor-widget-text-editor" data-id="2be31e9a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>We offer subscription plans, or you can always request a custom pricing service. <br/><strong>Free</strong> <strong>for personal use!</strong></p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-3e2d4043" data-id="3e2d4043" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-54a98a85 elementor-widget elementor-widget-heading" data-id="54a98a85" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">TEST API</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-40584b70 elementor-widget elementor-widget-text-editor" data-id="40584b70" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>Scrape the target website with our <strong>UI request executor</strong> or generate scraping code for the preferred language.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-62d1b2f" data-id="62d1b2f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2b493379 elementor-widget elementor-widget-heading" data-id="2b493379" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Scrape the Web</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-527d1c95 elementor-widget elementor-widget-text-editor" data-id="527d1c95" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>Build your data extraction pipeline using our <strong>API</strong> and forget about <strong>rate limits</strong> and <strong>blocks</strong>.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6f956fe elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6f956fe" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3b028e9" data-id="3b028e9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-44e680c elementor-align-center elementor-widget elementor-widget-button" data-id="44e680c" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://app.scrapingant.com/login" class="elementor-button-link elementor-button elementor-size-lg" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Try ScrapingAnt for free</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e6e5d92 elementor-widget elementor-widget-heading" data-id="e6e5d92" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">No credit card required</h6>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-6ddf70c6 elementor-section-height-min-height elementor-section-full_width elementor-section-height-default elementor-section-items-middle" data-id="6ddf70c6" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e6d1c89" data-id="e6d1c89" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-25323e19 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="25323e19" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-wider">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-14b73493" data-id="14b73493" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-48d3a61 elementor-widget elementor-widget-menu-anchor" data-id="48d3a61" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="features" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1f76de4f elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="1f76de4f" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fab fa-chrome"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>Chrome PAGE Rendering</span>
+				</h3>
+								<p class="elementor-icon-box-description">Many specialists have to handle Javascript rendering, and headless browser update and maintenance for Web Scraping. We will do it for you.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7555ca2c elementor-widget elementor-widget-spacer" data-id="7555ca2c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-60fbb1f8 elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="60fbb1f8" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-dharmachakra"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>Javascript EXECUTION</span>
+				</h3>
+								<p class="elementor-icon-box-description">Our Javascript execution feature is available in every pricing plan without any additional payments.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-da887aa elementor-widget elementor-widget-spacer" data-id="da887aa" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-561a237 elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="561a237" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-file-code"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>Output Preprocessing</span>
+				</h3>
+								<p class="elementor-icon-box-description">Our service supports the output preprocessing feature that gives you the ability to analyze and work with plain text output without dealing with HTML.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b7c33e9 elementor-widget elementor-widget-spacer" data-id="b7c33e9" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-51f4709 elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="51f4709" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-hammer"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>ON-DEMAND FEATURES</span>
+				</h3>
+								<p class="elementor-icon-box-description">We can offer you the best experience with our custom features. Just contact us if you need to resolve the Captcha, customize browser size, etc.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-711c7eef" data-id="711c7eef" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-75714a0a elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="75714a0a" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-shoe-prints"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>Low LATENCY ROTATING PROXIES</span>
+				</h3>
+								<p class="elementor-icon-box-description">Our services make requests using thousands of residential and non-residential rotating proxies across the world to provide the best scraping experience and fit all the business needs.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1dbc54df elementor-widget elementor-widget-spacer" data-id="1dbc54df" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-17f8caa0 elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="17f8caa0" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-server"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>Fastest AMAZON SERVERS</span>
+				</h3>
+								<p class="elementor-icon-box-description">Our service uses only high-end AWS server solutions to reduce network timeouts and provide high availability.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-765340b elementor-widget elementor-widget-spacer" data-id="765340b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3b4c75a elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="3b4c75a" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-cookie"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>Custom Cookies</span>
+				</h3>
+								<p class="elementor-icon-box-description">ScrapingAnt allows you to send custom cookies to the site for scraping with both GET and POST requests, so you will be able to scrape session-related data.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4d0ea1a elementor-widget elementor-widget-spacer" data-id="4d0ea1a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5a3057d elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="5a3057d" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="fas fa-robot"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span>AVOIDING Captcha</span>
+				</h3>
+								<p class="elementor-icon-box-description">Our headless Chrome browser settings and proxies quality allow us to make site scraping requests with low chance of Captcha check triggering.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-29b310f5 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="29b310f5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-26462bf4" data-id="26462bf4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2cd517f2 elementor-widget elementor-widget-heading" data-id="2cd517f2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Use Cases</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-28d6d145 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="28d6d145" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-75815536" data-id="75815536" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-e9a64b6 elementor-widget elementor-widget-heading" data-id="e9a64b6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">General Web Scraping</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-525a25b elementor-widget elementor-widget-text-editor" data-id="525a25b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>ScrapingAnt works great for general Web Scraping tasks like real estate scraping, price-monitoring, and extracting reviews without getting blocked.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7b4ba12c" data-id="7b4ba12c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3e513f05 elementor-widget elementor-widget-heading" data-id="3e513f05" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">ODDS SCRAPING</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2561b971 elementor-widget elementor-widget-text-editor" data-id="2561b971" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>The gambling business requires checking market odds. Tired of getting blocked by competitor sites? Thanks to our large elite proxy pool, you can forget about it.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-1769a771" data-id="1769a771" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-45bf7711 elementor-widget elementor-widget-heading" data-id="45bf7711" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">PRICE SCRAPING</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6256674f elementor-widget elementor-widget-text-editor" data-id="6256674f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>Overcome your competitors by researching the market. Scrape the product prices and observe the best deal with only a few code lines.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5f6ab9d9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5f6ab9d9" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4b1f65cb" data-id="4b1f65cb" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-34a6b9fd elementor-widget elementor-widget-menu-anchor" data-id="34a6b9fd" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="pricing" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3219a94e elementor-widget elementor-widget-heading" data-id="3219a94e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-large">Choose your plan</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5497e39c elementor-widget elementor-widget-text-editor" data-id="5497e39c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>ScrapingAnt is a service with the availability of custom pricing.<br/>For any questions and custom pricing request please <a href="#contact">Contact Us</a><br/><br/><strong>No concurrency limits!</strong></p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c84b549 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c84b549" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4ac78ee" data-id="4ac78ee" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-e8c8ba5 elementor-widget elementor-widget-price-table" data-id="e8c8ba5" data-element_type="widget" data-widget_type="price-table.default">
+				<div class="elementor-widget-container">
+			
+		<div class="elementor-price-table">
+							<div class="elementor-price-table__header">
+											<h3 class="elementor-price-table__heading">Free</h3>
+					
+											<span class="elementor-price-table__subheading"><b>10.000 API credits</b></span>
+									</div>
+			
+			<div class="elementor-price-table__price">
+																	<span class="elementor-price-table__integer-part">Free</span>
+				
+				
+				
+									<span class="elementor-price-table__period elementor-typo-excluded">Monthly</span>							</div>
+
+							<ul class="elementor-price-table__features-list">
+											<li class="elementor-repeater-item-de45538">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Javascript rendering									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-3d00301">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Custom cookies									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-4fb7175">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Output preprocessing									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-329eb06">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Basic email support									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-99e90aa">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Documentation only									</span>
+																</div>
+						</li>
+									</ul>
+			
+							<div class="elementor-price-table__footer">
+											<a class="elementor-price-table__button elementor-button elementor-size-md" href="https://app.scrapingant.com/login">Get Started</a>
+					
+									</div>
+					</div>
+
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-8a6095e" data-id="8a6095e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d015228 elementor-widget elementor-widget-price-table" data-id="d015228" data-element_type="widget" data-widget_type="price-table.default">
+				<div class="elementor-widget-container">
+			
+		<div class="elementor-price-table">
+							<div class="elementor-price-table__header">
+											<h3 class="elementor-price-table__heading">Enthusiast</h3>
+					
+											<span class="elementor-price-table__subheading"><b>100.000 API credits</b></span>
+									</div>
+			
+			<div class="elementor-price-table__price">
+								<span class="elementor-price-table__currency elementor-currency--before">&#36;</span>									<span class="elementor-price-table__integer-part">19</span>
+				
+				
+				
+									<span class="elementor-price-table__period elementor-typo-excluded">Monthly</span>							</div>
+
+							<ul class="elementor-price-table__features-list">
+											<li class="elementor-repeater-item-de45538">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Javascript rendering									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-3d00301">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Custom cookies									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-4fb7175">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Output preprocessing									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-329eb06">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Standard email support									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-8ec5e1e">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Documentation only									</span>
+																</div>
+						</li>
+									</ul>
+			
+							<div class="elementor-price-table__footer">
+											<a class="elementor-price-table__button elementor-button elementor-size-md" href="https://app.scrapingant.com/login">Get Started</a>
+					
+									</div>
+					</div>
+
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-0b87c75" data-id="0b87c75" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4e94e65 elementor-widget elementor-widget-price-table" data-id="4e94e65" data-element_type="widget" data-widget_type="price-table.default">
+				<div class="elementor-widget-container">
+			
+		<div class="elementor-price-table">
+							<div class="elementor-price-table__header">
+											<h3 class="elementor-price-table__heading">Startup</h3>
+					
+											<span class="elementor-price-table__subheading"><b>500.000 API credits</b></span>
+									</div>
+			
+			<div class="elementor-price-table__price">
+								<span class="elementor-price-table__currency elementor-currency--before">&#36;</span>									<span class="elementor-price-table__integer-part">49</span>
+				
+				
+				
+									<span class="elementor-price-table__period elementor-typo-excluded">Monthly</span>							</div>
+
+							<ul class="elementor-price-table__features-list">
+											<li class="elementor-repeater-item-de45538">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Javascript rendering									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-3d00301">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Custom cookies									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-4fb7175">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Output preprocessing									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-329eb06">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Priority email support									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-f2f22dc">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Expert  assistance									</span>
+																</div>
+						</li>
+									</ul>
+			
+							<div class="elementor-price-table__footer">
+											<a class="elementor-price-table__button elementor-button elementor-size-md" href="https://app.scrapingant.com/login">Get Started</a>
+					
+									</div>
+					</div>
+
+					<div class="elementor-price-table__ribbon">
+				<div class="elementor-price-table__ribbon-inner">Popular</div>
+			</div>
+					</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-af58132" data-id="af58132" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-8e3beb5 elementor-widget elementor-widget-price-table" data-id="8e3beb5" data-element_type="widget" data-widget_type="price-table.default">
+				<div class="elementor-widget-container">
+			
+		<div class="elementor-price-table">
+							<div class="elementor-price-table__header">
+											<h3 class="elementor-price-table__heading">Business</h3>
+					
+											<span class="elementor-price-table__subheading"><b>3.000.000 API credits</b></span>
+									</div>
+			
+			<div class="elementor-price-table__price">
+								<span class="elementor-price-table__currency elementor-currency--before">&#36;</span>									<span class="elementor-price-table__integer-part">249</span>
+				
+				
+				
+									<span class="elementor-price-table__period elementor-typo-excluded">Monthly</span>							</div>
+
+							<ul class="elementor-price-table__features-list">
+											<li class="elementor-repeater-item-de45538">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Javascript rendering									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-3d00301">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Custom cookies									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-4fb7175">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Output preprocessing									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-329eb06">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Dedicated manager									</span>
+																</div>
+						</li>
+											<li class="elementor-repeater-item-672155d">
+							<div class="elementor-price-table__feature-inner">
+								<i aria-hidden="true" class="fas fa-check"></i>																	<span>
+										Expert guidance									</span>
+																</div>
+						</li>
+									</ul>
+			
+							<div class="elementor-price-table__footer">
+											<a class="elementor-price-table__button elementor-button elementor-size-md" href="https://app.scrapingant.com/login">Get Started</a>
+					
+									</div>
+					</div>
+
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1f54d48f elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f54d48f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3310a190" data-id="3310a190" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b6fa4a5 elementor-widget elementor-widget-menu-anchor" data-id="b6fa4a5" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="faq" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-59a4275a elementor-widget elementor-widget-heading" data-id="59a4275a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">FAQ</h4>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-556383ee elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="556383ee" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4f7ac6c3" data-id="4f7ac6c3" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1b3f5864 elementor-widget elementor-widget-heading" data-id="1b3f5864" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">What is ScrapingAnt?</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-29cba176 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="29cba176" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5bac865 elementor-widget elementor-widget-text-editor" data-id="5bac865" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>ScrapingAnt is a service that helps you to solve complex scraping tasks. With using of thousands proxies around the World and headless browser service we can provide you the best web harvesting and scraping experience.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-145b7c5d" data-id="145b7c5d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7c98580a elementor-widget elementor-widget-heading" data-id="7c98580a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">I'd like to have more requests for lower pricing.</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-153addee elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="153addee" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b252cef elementor-widget elementor-widget-text-editor" data-id="b252cef" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					Sure! It&#8217;s feasible for us. We regularly create custom plans for our clients with any of additional features, just <a href="https://scrapingant.com/#contact">Contact Us</a> and describe your needs.					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-20cc3332 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="20cc3332" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6de42926" data-id="6de42926" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3a1cb7b1 elementor-widget elementor-widget-heading" data-id="3a1cb7b1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Can I use your service for the SEO purposes?</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1cc31b47 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="1cc31b47" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a9d434e elementor-widget elementor-widget-text-editor" data-id="a9d434e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>SEO is one of the main web scraping and crawling purposes.<br/>SEO crawling is extracting data about a website. In this process, search engine crawlers/spiders or bots collect details about each page including titles, images, keywords, and other linked pages. It is through this indexing that a search engine can return results that pertain to a search phrase or keyword that you enter. This process can be also used for implementing custom search engine.<br/>Google search is both a web crawler and a web scraper.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-43661909" data-id="43661909" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4546378 elementor-widget elementor-widget-heading" data-id="4546378" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Is Web scraping legal?</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-20ae303c elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="20ae303c" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-19d06e77 elementor-widget elementor-widget-text-editor" data-id="19d06e77" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>Web scraping is generally legal process.<br/>In late 2019, the US Court of Appeals denied LinkedIn’s request to prevent an analytics company, from scraping its data. The decision was a historic moment in the data privacy and data regulation era. It showed that any data that is<strong> publicly available</strong> and <strong>not copyrighted</strong> is totally allowed for web crawlers.<br/>So please, check the terms and conditions of the crawled resource and your country laws.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-c5b93e1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c5b93e1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ba44ed8" data-id="ba44ed8" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-069894f elementor-widget elementor-widget-heading" data-id="069894f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">I'm not a developer, can you create custom scraping scripts for me?</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4ace81e elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="4ace81e" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0a91b48 elementor-widget elementor-widget-text-editor" data-id="0a91b48" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					Yes of course! We regularly create custom scraping scripts/projects for our clients, just <a href="https://scrapingant.com/#contact">Contact Us</a> and describe your needs.					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-97a691a" data-id="97a691a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-690b5de elementor-widget elementor-widget-heading" data-id="690b5de" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Are you hiring?</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-87654ee elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="87654ee" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2473c2b elementor-widget elementor-widget-text-editor" data-id="2473c2b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					<p>If you have any proposals or suggestions &#8211; please welcome to  <a href="https://scrapingant.com/#contact">Contact Us</a>.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5d4d85f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d4d85f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d11f26c" data-id="d11f26c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-be14ca5 elementor-widget elementor-widget-menu-anchor" data-id="be14ca5" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="team" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0424891 elementor-widget elementor-widget-heading" data-id="0424891" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Who we are​</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-49576a8 elementor-widget elementor-widget-heading" data-id="49576a8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Meet the tech-savvy guys</h4>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-42269b42 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="42269b42" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7465caa7" data-id="7465caa7" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f82825d elementor-testimonial--layout-image_above elementor-testimonial--skin-default elementor-testimonial--align-center elementor-arrows-yes elementor-pagination-type-bullets elementor-widget elementor-widget-testimonial-carousel" data-id="f82825d" data-element_type="widget" data-settings="{&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="testimonial-carousel.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper-container">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial">
+							<div class="elementor-testimonial__content">
+					<div class="elementor-testimonial__text">
+						Experienced and effective software development manager with a technical background in various areas: backend, mobile, web, desktop, IoT, etc. Cybersecurity bachelor.					</div>
+					<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Oleg Kulyk</span><span class="elementor-testimonial__title">PRODUCT AND MARKETING</span></cite>				</div>
+						<div class="elementor-testimonial__footer">
+									<div class="elementor-testimonial__image">
+						<img src="https://scrapingant.com/wp-content/uploads/2020/04/OlegKulyk.jpg" alt="Oleg Kulyk">
+					</div>
+											</div>
+		</div>
+								</div>
+									</div>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7bb984be" data-id="7bb984be" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2fd00ed1 elementor-testimonial--layout-image_above elementor-testimonial--skin-default elementor-testimonial--align-center elementor-arrows-yes elementor-pagination-type-bullets elementor-widget elementor-widget-testimonial-carousel" data-id="2fd00ed1" data-element_type="widget" data-settings="{&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="testimonial-carousel.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper-container">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial">
+							<div class="elementor-testimonial__content">
+					<div class="elementor-testimonial__text">
+						Andrew is a senior developer and data scientist with a massive experience in web-scraping. Cryptography and applied math bachelor.					</div>
+					<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Andrew Kovalenko</span><span class="elementor-testimonial__title">Inftrastructure And TECHNOLOGY</span></cite>				</div>
+						<div class="elementor-testimonial__footer">
+									<div class="elementor-testimonial__image">
+						<img src="https://scrapingant.com/wp-content/uploads/2020/04/photo_2020-04-04-13.56.03-e1585997980455.jpeg" alt="Andrew Kovalenko">
+					</div>
+											</div>
+		</div>
+								</div>
+									</div>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1297cc81 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1297cc81" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-748b316a" data-id="748b316a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9da98ea elementor-widget elementor-widget-menu-anchor" data-id="9da98ea" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="contact" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-62b984c1 elementor-widget elementor-widget-heading" data-id="62b984c1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Contact us</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3266db7 elementor-widget elementor-widget-text-editor" data-id="3266db7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					Contact us via support email: <a href="mailto:support@scrapingant.com">support@scrapingant.com</a> or with the form below					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6ebba46 elementor-button-align-center elementor-mobile-button-align-center elementor-widget elementor-widget-form" data-id="6ebba46" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="Contact form">
+			<input type="hidden" name="post_id" value="45"/>
+			<input type="hidden" name="form_id" value="6ebba46"/>
+			<input type="hidden" name="referer_title" value="ScrapingAnt - Web Scraping API | Headless Chrome | Proxy"/>
+
+							<input type="hidden" name="queried_id" value="45"/>
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-above">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50">
+					<label for="form-field-name" class="elementor-field-label">USERNAME</label><input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Username">				</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
+					<label for="form-field-email" class="elementor-field-label">E-MAIL</label><input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Your E-mail" required="required" aria-required="true">				</div>
+								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-6ed25c0 elementor-col-100">
+					<label for="form-field-6ed25c0" class="elementor-field-label">Message</label><textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="form_fields[6ed25c0]" id="form-field-6ed25c0" rows="4" placeholder="Your Text"></textarea>				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-lg">
+						<span>
+															<span class=" elementor-button-icon">
+																										</span>
+																						<span class="elementor-button-text">Contact us</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-12db1b3d elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="12db1b3d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5fb07160" data-id="5fb07160" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2ff005cf elementor-widget elementor-widget-heading" data-id="2ff005cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">ScrapingAnt - your best scraping provider</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7d900fa6 elementor-widget elementor-widget-heading" data-id="7d900fa6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Grow your business with us</h3>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2e9eca82" data-id="2e9eca82" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-23befce0" data-id="23befce0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-313167ae elementor-align-right elementor-tablet-align-right elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="313167ae" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://app.scrapingant.com/login" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">try now</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+				<div data-elementor-type="footer" data-elementor-id="309" class="elementor elementor-309 elementor-location-footer" data-elementor-settings="[]">
+		<div class="elementor-section-wrap">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-53825018 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53825018" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7792e4fd" data-id="7792e4fd" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1e33a199 elementor-widget elementor-widget-heading" data-id="1e33a199" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Get Started</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-79b6b543 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="79b6b543" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/#features">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Features</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/#pricing">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Pricing</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/#faq">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">FAQ</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/blog/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Blog</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://docs.scrapingant.com/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Documentation</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://app.scrapingant.com/login">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Free Trial</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7e089b75" data-id="7e089b75" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9f70921 elementor-widget elementor-widget-heading" data-id="9f70921" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Legal</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-18f2a6f1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="18f2a6f1" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/legal/terms-of-use">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Terms of Use</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/legal/privacy-policy">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Privacy Policy</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/legal/cookies-policy">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Cokies Policy</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-464600f1" data-id="464600f1" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7d97665 elementor-widget elementor-widget-heading" data-id="7d97665" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Company</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1592002c elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1592002c" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/#team">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Team</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/#contact">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Contact Us</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://scrapingant.com/legal/affiliate/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Affiliate Program</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4e601686" data-id="4e601686" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7788d2b8 elementor-widget elementor-widget-heading" data-id="7788d2b8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">External Links</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1865c103 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1865c103" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://github.com/ScrapingAnt/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">GitHub</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.facebook.com/scrapingant/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Facebook</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://rapidapi.com/okami4kak/api/scrapingant">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-right"></i>						</span>
+										<span class="elementor-icon-list-text">RapidAPI</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<footer class="elementor-section elementor-top-section elementor-element elementor-element-19d0870d elementor-section-content-middle elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="19d0870d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4d18d320" data-id="4d18d320" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-79cfd9e6 elementor-widget elementor-widget-heading" data-id="79cfd9e6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">© ScrapingAnt 2020-2021</p>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3b7685c7" data-id="3b7685c7" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3ccd7d72 e-grid-align-center e-grid-align-right e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="3ccd7d72" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper elementor-grid">
+							<div class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-dc10550" href="https://twitter.com/ScrapingAnt" target="_blank">
+						<span class="elementor-screen-only">Twitter</span>
+						<i class="fab fa-twitter"></i>					</a>
+				</div>
+							<div class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-0267196" href="https://www.facebook.com/scrapingant" target="_blank">
+						<span class="elementor-screen-only">Facebook-f</span>
+						<i class="fab fa-facebook-f"></i>					</a>
+				</div>
+							<div class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-a5feb0a" href="https://www.linkedin.com/in/kami4ka/" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i class="fab fa-linkedin"></i>					</a>
+				</div>
+							<div class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-77559d4" href="https://www.linkedin.com/in/andrew-kovalenko-82466118/" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i class="fab fa-linkedin"></i>					</a>
+				</div>
+							<div class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-github elementor-repeater-item-e2f9cab" href="https://github.com/ScrapingAnt" target="_blank">
+						<span class="elementor-screen-only">Github</span>
+						<i class="fab fa-github"></i>					</a>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</footer>
+				</div>
+		</div>
+		
+<script type='text/javascript' src='https://scrapingant.com/wp-includes/js/wp-embed.min.js?ver=5.6.4' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1' id='smartmenus-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.2.1' id='elementor-pro-webpack-runtime-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.2.4' id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.2.4' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.2.1' id='elementor-sticky-js'></script>
+<script type='text/javascript' id='elementor-pro-frontend-js-before'>var ElementorProFrontendConfig={"ajaxurl":"https:\/\/scrapingant.com\/wp-admin\/admin-ajax.php","nonce":"e006f28763","urls":{"assets":"http:\/\/scrapingant.com\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"http:\/\/scrapingant.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};</script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.2.1' id='elementor-pro-frontend-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.2.4' id='share-link-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>var elementorFrontendConfig={"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1365,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1620,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"direction":"min","is_enabled":false}}},"version":"3.2.4","is_static":false,"experimentalFeatures":{"form-submissions":true},"urls":{"assets":"http:\/\/scrapingant.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":45,"title":"ScrapingAnt%20-%20Web%20Scraping%20API%20%7C%20Headless%20Chrome%20%7C%20Proxy","excerpt":"","featuredImage":"https:\/\/scrapingant.com\/wp-content\/uploads\/2020\/04\/1-3-1024x676.jpg"}};</script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.2.4' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.2.1' id='pro-preloaded-elements-handlers-js'></script>
+<script type='text/javascript' src='https://scrapingant.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.2.4' id='preloaded-modules-js'></script>
+   </body>
+</html>
