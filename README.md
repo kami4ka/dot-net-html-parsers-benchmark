@@ -1,10 +1,10 @@
-# Benchmart for HTML parsing libraries ib C#
+# Benchmark for HTML parsing libraries in C#
 
 Benchmark for my article [How to parse HTML in .NET](https://scrapingant.com/blog/parse-html-dot-net)
 
-To measure parser performance I used the [BenchmarkDotNet](https://github.com/PerfDotNet/BenchmarkDotNet) library from DreamWalker.
+To measure the parser performance I've used the [BenchmarkDotNet](https://github.com/PerfDotNet/BenchmarkDotNet) library from DreamWalker.
 
-The measurements were made on an Intel® Core(TM) i9-9880H CPU @ 2.30GHz.
+The measurements were made on Intel® Core(TM) i9-9880H CPU @ 2.30GHz.
 
 # Results
 
